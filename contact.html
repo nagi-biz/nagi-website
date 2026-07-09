@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>お問い合わせ | 梛合同会社</title>
+<meta name="description" content="梛合同会社へのお問い合わせはこちらから。">
+<link rel="icon" href="assets/images/logo.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <span class="logo-badge"><img src="assets/images/logo-transparent.png" alt="梛合同会社 ロゴ"></span>
+      <span class="brand-name">梛合同会社<small>nagi Limited Liability Company</small></span>
+    </a>
+    <nav class="nav">
+      <a href="index.html">ホーム</a>
+      <a href="business.html">事業内容</a>
+      <a href="news.html">お知らせ</a>
+      <a href="about.html">会社概要</a>
+      <a href="contact.html" class="nav-cta current">お問い合わせ</a>
+    </nav>
+    <button class="menu-toggle" aria-label="メニュー">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="page-header">
+  <div class="container">
+    <span class="eyebrow">CONTACT</span>
+    <h1>お問い合わせ</h1>
+    <p class="breadcrumb"><a href="index.html">ホーム</a> / お問い合わせ</p>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <div class="contact-layout">
+      <div class="contact-info">
+        <div class="card">
+          <div class="card-icon">📞</div>
+          <h3>お電話でのお問い合わせ</h3>
+          <p>00-0000-0000（仮の情報です）<br>受付時間：平日9:00〜18:00</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">✉️</div>
+          <h3>メールでのお問い合わせ</h3>
+          <p>info@example.com（仮の情報です）</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">📍</div>
+          <h3>所在地</h3>
+          <p>〒900-0000沖縄県那覇市◯◯1-2-3（仮の情報です）</p>
+        </div>
+      </div>
+
+      <form class="contact-form" action="#" method="post">
+        <div class="form-group">
+          <label for="company">会社名<span class="req">必須</span></label>
+          <input type="text" id="company" name="company" required>
+        </div>
+        <div class="form-group">
+          <label for="name">お名前<span class="req">必須</span></label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">メールアドレス<span class="req">必須</span></label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="tel">電話番号</label>
+          <input type="tel" id="tel" name="tel">
+        </div>
+        <div class="form-group">
+          <label for="subject">お問い合わせ項目<span class="req">必須</span></label>
+          <select id="subject" name="subject" required>
+            <option value="">選択してください</option>
+            <option value="cost">コスト削減事業について（業務用空調設備の省エネ・新電力・法人携帯・電子ブレーカー・太陽光・蓄電池）</option>
+            <option value="growth">集客・売上向上事業について（デジタルサイネージ・集客アプリ・フードデリバリー・生成AI）</option>
+            <option value="other">その他</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">お問い合わせ内容<span class="req">必須</span></label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+        </div>
+        <p class="form-note">※現在このフォームはデザイン確認用の仮設置です。実際に送信するには、WordPress化の際にフォームプラグイン等との連携が必要です。</p>
+        <button type="submit" class="btn btn-primary">送信内容を確認する</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<div class="wave-divider"><img src="assets/images/wave-divider.svg" alt=""></div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="footer-brand">
+          <span class="logo-badge"><img src="assets/images/logo-transparent.png" alt=""></span>
+          <span>梛合同会社</span>
+        </div>
+        <p style="font-size:0.85rem;">コスト削減事業と集客・売上向上事業を通じて、企業の持続的な成長を支えます。</p>
+      </div>
+      <div class="footer-col">
+        <h4>サイトマップ</h4>
+        <ul>
+          <li><a href="index.html">ホーム</a></li>
+          <li><a href="business.html">事業内容</a></li>
+          <li><a href="news.html">お知らせ</a></li>
+          <li><a href="about.html">会社概要</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>事業</h4>
+        <ul>
+          <li><a href="business.html#cost">コスト削減事業</a></li>
+          <li><a href="business.html#growth">集客・売上向上事業</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>お問い合わせ</h4>
+        <ul>
+          <li>〒900-0000 沖縄県那覇市◯◯1-2-3</li>
+          <li>TEL: 00-0000-0000</li>
+          <li>Email: info@example.com</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Nagi Godo Kaisha. All Rights Reserved.</span>
+      <span>※連絡先情報は仮のものです</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
