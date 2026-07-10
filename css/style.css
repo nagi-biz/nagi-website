@@ -264,11 +264,11 @@ img { max-width: 100%; display: block; }
 
 .vision-block p {
   color: var(--text);
-  font-size: 1.15rem;
+  font-size: 1.3rem;
   font-weight: 600;
   max-width: 1180px;
   margin: 0 auto 20px;
-  text-align: left;
+  text-align: center;
 }
 
 .vision-block p:last-child { margin-bottom: 0; }
