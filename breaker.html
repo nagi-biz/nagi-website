@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>お問い合わせ | 梛合同会社</title>
-<meta name="description" content="梛合同会社へのお問い合わせはこちらから。">
+<title>電子ブレーカー | 梛合同会社</title>
+<meta name="description" content="電子ブレーカーの導入で、契約電力を最適化し電気代の基本料金を削減します。">
 <link rel="icon" href="assets/images/logo.png">
 <link rel="stylesheet" href="css/style.css">
 </head>
@@ -19,7 +19,7 @@
     <nav class="nav">
       <a href="index.html">ホーム</a>
       <div class="nav-item has-dropdown">
-        <a href="business.html">事業内容</a>
+        <a href="business.html" class="current">事業内容</a>
         <button class="nav-dropdown-toggle" aria-label="事業内容の一覧を開く">▾</button>
         <div class="nav-dropdown">
           <div class="nav-dropdown-group">
@@ -42,7 +42,7 @@
       </div>
       <a href="news.html">お知らせ</a>
       <a href="about.html">会社概要</a>
-      <a href="contact.html" class="nav-cta current">お問い合わせ</a>
+      <a href="contact.html" class="nav-cta">お問い合わせ</a>
     </nav>
     <button class="menu-toggle" aria-label="メニュー">
       <span></span><span></span><span></span>
@@ -52,66 +52,37 @@
 
 <div class="page-header">
   <div class="container">
-    <span class="eyebrow">CONTACT</span>
-    <h1>お問い合わせ</h1>
-    <p class="breadcrumb"><a href="index.html">ホーム</a> / お問い合わせ</p>
+    <span class="eyebrow">COST REDUCTION</span>
+    <h1>電子ブレーカー</h1>
+    <p class="breadcrumb"><a href="index.html">ホーム</a> / <a href="business.html">事業内容</a> / 電子ブレーカー</p>
   </div>
 </div>
 
 <section>
   <div class="container">
-    <div class="contact-layout">
-      <div class="contact-info">
-        <div class="card">
-          <div class="card-icon">📞</div>
-          <h3>お電話でのお問い合わせ</h3>
-          <p>090-6639-5103<br>受付時間：平日9:00〜18:00</p>
-        </div>
-        <div class="card">
-          <div class="card-icon">✉️</div>
-          <h3>メールでのお問い合わせ</h3>
-          <p>info.nagi.biz@gmail.com</p>
-        </div>
-        <div class="card">
-          <div class="card-icon">📍</div>
-          <h3>所在地</h3>
-          <p>〒902-0077沖縄県那覇市長田2-22-15</p>
-        </div>
+    <div class="biz-block">
+      <div class="biz-visual biz-visual-photo"><img src="assets/images/breaker.jpg" alt="電子ブレーカー"></div>
+      <div class="biz-content">
+        <span class="biz-number">COST REDUCTION / 04</span>
+        <p>契約電力の基本料金を最適化する電子ブレーカーの導入により、電気代の基本料金部分を削減します。工事も比較的簡易で、短期間での導入が可能です。</p>
+        <ul>
+          <li>契約電力の見直し提案</li>
+          <li>短工期での設置対応</li>
+          <li>導入後の動作モニタリング</li>
+        </ul>
       </div>
+    </div>
+  </div>
+</section>
 
-      <form class="contact-form" action="#" method="post">
-        <div class="form-group">
-          <label for="company">会社名<span class="req">必須</span></label>
-          <input type="text" id="company" name="company" required>
-        </div>
-        <div class="form-group">
-          <label for="name">お名前<span class="req">必須</span></label>
-          <input type="text" id="name" name="name" required>
-        </div>
-        <div class="form-group">
-          <label for="email">メールアドレス<span class="req">必須</span></label>
-          <input type="email" id="email" name="email" required>
-        </div>
-        <div class="form-group">
-          <label for="tel">電話番号</label>
-          <input type="tel" id="tel" name="tel">
-        </div>
-        <div class="form-group">
-          <label for="subject">お問い合わせ項目<span class="req">必須</span></label>
-          <select id="subject" name="subject" required>
-            <option value="">選択してください</option>
-            <option value="cost">コスト削減事業について（業務用空調設備の省エネ・新電力・法人携帯・電子ブレーカー・太陽光・蓄電池）</option>
-            <option value="growth">集客・売上向上事業について（デジタルサイネージ・集客アプリ・フードデリバリー・生成AI）</option>
-            <option value="other">その他</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="message">お問い合わせ内容<span class="req">必須</span></label>
-          <textarea id="message" name="message" rows="6" required></textarea>
-        </div>
-        <p class="form-note">※現在このフォームはデザイン確認用の仮設置です。実際に送信するには、WordPress化の際にフォームプラグイン等との連携が必要です。</p>
-        <button type="submit" class="btn btn-primary">送信内容を確認する</button>
-      </form>
+<section class="alt-bg">
+  <div class="container">
+    <div class="cta-banner">
+      <h2>まずは無料相談から</h2>
+      <p>お気軽にお問い合わせください。専門スタッフが丁寧にご案内します。</p>
+      <div class="btn-row" style="justify-content:center;">
+        <a href="contact.html" class="btn btn-primary">お問い合わせはこちら</a>
+      </div>
     </div>
   </div>
 </section>

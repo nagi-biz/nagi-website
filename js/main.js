@@ -6,4 +6,13 @@ document.addEventListener("DOMContentLoaded", function () {
       nav.classList.toggle("open");
     });
   }
+
+  var dropdownToggle = document.querySelector(".nav-dropdown-toggle");
+  var navItem = document.querySelector(".nav-item.has-dropdown");
+  if (dropdownToggle && navItem) {
+    dropdownToggle.addEventListener("click", function (e) {
+      e.preventDefault();
+      navItem.classList.toggle("open");
+    });
+  }
 });

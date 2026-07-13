@@ -18,7 +18,28 @@
     </a>
     <nav class="nav">
       <a href="index.html">ホーム</a>
-      <a href="business.html" class="current">事業内容</a>
+      <div class="nav-item has-dropdown">
+        <a href="business.html" class="current">事業内容</a>
+        <button class="nav-dropdown-toggle" aria-label="事業内容の一覧を開く">▾</button>
+        <div class="nav-dropdown">
+          <div class="nav-dropdown-group">
+            <span class="nav-dropdown-label">コスト削減事業</span>
+            <a href="energy.html">業務用空調設備の省エネ</a>
+            <a href="power.html">新電力</a>
+            <a href="mobile.html">法人携帯</a>
+            <a href="breaker.html">電子ブレーカー</a>
+            <a href="solar.html">太陽光発電</a>
+            <a href="battery.html">蓄電池</a>
+          </div>
+          <div class="nav-dropdown-group">
+            <span class="nav-dropdown-label">集客・売上向上事業</span>
+            <a href="signage.html">デジタルサイネージ</a>
+            <a href="app.html">新規集客アプリ</a>
+            <a href="delivery.html">フードデリバリー加盟店募集</a>
+            <a href="ai.html">生成AI活用支援</a>
+          </div>
+        </div>
+      </div>
       <a href="news.html">お知らせ</a>
       <a href="about.html">会社概要</a>
       <a href="contact.html" class="nav-cta">お問い合わせ</a>
@@ -45,90 +66,56 @@
       <p>業務用空調設備の省エネ・新電力・法人携帯・電子ブレーカー・太陽光・蓄電池など、企業の固定費を見直し、無理のないコスト削減を実現します。</p>
     </div>
 
-    <div class="biz-block" id="energy">
-      <div class="biz-visual biz-visual-photo"><img src="assets/images/energy.png" alt="業務用空調設備の省エネ"></div>
-      <div class="biz-content">
-        <span class="biz-number">MAIN BUSINESS / 01</span>
-        <h2>業務用空調設備の省エネ</h2>
-        <p>業務用空調設備の省エネ化により、電気代のコスト削減をご提案する、当社の主力事業です。現状の使用状況を診断し、投資回収期間まで見据えたプランをご提示します。</p>
-        <ul>
-          <li>業務用空調設備の省エネ診断</li>
-          <li>設備更新・省エネ機器の導入提案（レベルアッパー／COOLNOMIX 等）</li>
-          <li>導入後の運用フォロー</li>
-        </ul>
+    <div class="grid-3">
+      <div class="card strength-card">
+        <div class="card-photo"><img src="assets/images/energy.png" alt="業務用空調設備の省エネ"></div>
+        <div class="card-body">
+          <h3>業務用空調設備の省エネ</h3>
+          <p>業務用空調設備の省エネ化をご提案。主力事業として多数の実績があります。</p>
+          <a href="energy.html" class="card-link">詳しく見る →</a>
+        </div>
+      </div>
+      <div class="card strength-card">
+        <div class="card-photo card-photo-contain card-photo-fill"><img src="assets/images/power.png" alt="新電力"></div>
+        <div class="card-body">
+          <h3>新電力</h3>
+          <p>電力自由化に対応した新電力プランへの切り替えで、電気料金のコスト削減を実現します。</p>
+          <a href="power.html" class="card-link">詳しく見る →</a>
+        </div>
+      </div>
+      <div class="card strength-card">
+        <div class="card-photo"><img src="assets/images/mobile.png" alt="法人携帯"></div>
+        <div class="card-body">
+          <h3>法人携帯</h3>
+          <p>法人向け携帯電話プランの見直しにより、通信費のコスト削減をご支援します。</p>
+          <a href="mobile.html" class="card-link">詳しく見る →</a>
+        </div>
+      </div>
+      <div class="card strength-card">
+        <div class="card-photo"><img src="assets/images/breaker.jpg" alt="電子ブレーカー"></div>
+        <div class="card-body">
+          <h3>電子ブレーカー</h3>
+          <p>契約電力を最適化する電子ブレーカーの導入で、電気代の基本料金を削減します。</p>
+          <a href="breaker.html" class="card-link">詳しく見る →</a>
+        </div>
+      </div>
+      <div class="card strength-card">
+        <div class="card-photo"><img src="assets/images/solar.png" alt="太陽光発電"></div>
+        <div class="card-body">
+          <h3>太陽光発電</h3>
+          <p>太陽光発電設備の導入で、電力の自家消費と電気料金の削減を両立します。</p>
+          <a href="solar.html" class="card-link">詳しく見る →</a>
+        </div>
+      </div>
+      <div class="card strength-card">
+        <div class="card-photo card-photo-contain card-photo-fill"><img src="assets/images/battery.png" alt="蓄電池"></div>
+        <div class="card-body">
+          <h3>蓄電池</h3>
+          <p>蓄電池の導入により、自家消費率の向上と非常時の電源確保を実現します。</p>
+          <a href="battery.html" class="card-link">詳しく見る →</a>
+        </div>
       </div>
     </div>
-
-    <div class="biz-block reverse" id="power">
-      <div class="biz-visual biz-visual-fill"><img src="assets/images/power.png" alt="新電力"></div>
-      <div class="biz-content">
-        <span class="biz-number">COST REDUCTION / 02</span>
-        <h2>新電力</h2>
-        <p>電力自由化により選択肢が広がった新電力プランの中から、貴社の使用状況に合った最適なプランをご提案し、電気料金の削減を実現します。</p>
-        <ul>
-          <li>現行プランとの比較シミュレーション</li>
-          <li>切り替え手続きのサポート</li>
-          <li>契約後の料金モニタリング</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="biz-block" id="mobile">
-      <div class="biz-visual biz-visual-photo"><img src="assets/images/mobile.png" alt="法人携帯"></div>
-      <div class="biz-content">
-        <span class="biz-number">COST REDUCTION / 03</span>
-        <h2>法人携帯</h2>
-        <p>法人向け携帯電話プランの見直しにより、通信費のコスト削減をご支援します。現在ご利用中のプランを分析し、ムダのない最適なプランへの切り替えをご提案します。</p>
-        <ul>
-          <li>現行プランの利用状況分析</li>
-          <li>法人携帯プランの比較・切り替え提案</li>
-          <li>導入後の運用サポート</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="biz-block reverse" id="breaker">
-      <div class="biz-visual biz-visual-photo"><img src="assets/images/breaker.jpg" alt="電子ブレーカー"></div>
-      <div class="biz-content">
-        <span class="biz-number">COST REDUCTION / 04</span>
-        <h2>電子ブレーカー</h2>
-        <p>契約電力の基本料金を最適化する電子ブレーカーの導入により、電気代の基本料金部分を削減します。工事も比較的簡易で、短期間での導入が可能です。</p>
-        <ul>
-          <li>契約電力の見直し提案</li>
-          <li>短工期での設置対応</li>
-          <li>導入後の動作モニタリング</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="biz-block" id="solar">
-      <div class="biz-visual biz-visual-photo"><img src="assets/images/solar.png" alt="太陽光発電"></div>
-      <div class="biz-content">
-        <span class="biz-number">COST REDUCTION / 05</span>
-        <h2>太陽光発電</h2>
-        <p>太陽光発電設備の導入により、電力の自家消費を進め、電気料金の削減と非常時の電源確保を両立します。</p>
-        <ul>
-          <li>設置シミュレーション・発電量診断</li>
-          <li>補助金活用のご提案</li>
-          <li>導入後のメンテナンスサポート</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="biz-block reverse" id="battery">
-      <div class="biz-visual biz-visual-fill"><img src="assets/images/battery.png" alt="蓄電池"></div>
-      <div class="biz-content">
-        <span class="biz-number">COST REDUCTION / 06</span>
-        <h2>蓄電池</h2>
-        <p>蓄電池の導入により、電力の自家消費率を高め、災害時の非常用電源としても活用いただけます。太陽光発電との組み合わせで、さらなるコスト削減を実現します。</p>
-        <ul>
-          <li>用途に応じた蓄電容量のご提案</li>
-          <li>太陽光発電とのセット導入</li>
-          <li>導入後の運用サポート</li>
-        </ul>
-      </div>
-    </div>
-
   </div>
 </section>
 
@@ -140,62 +127,40 @@
       <p>デジタルサイネージや集客アプリ、生成AIなどを活用し、新規顧客の獲得と売上向上をサポートします。</p>
     </div>
 
-    <div class="biz-block reverse" id="signage">
-      <div class="biz-visual biz-visual-photo"><img src="assets/images/signage.png" alt="デジタルサイネージ"></div>
-      <div class="biz-content">
-        <span class="biz-number">GROWTH BUSINESS / 01</span>
-        <h2>デジタルサイネージ</h2>
-        <p>店舗・オフィス向けデジタルサイネージの導入により、情報発信力を高め、集客や売上向上をご支援します。設置場所や目的に応じた機器選定から運用まで一貫してサポートします。</p>
-        <ul>
-          <li>設置場所・目的に応じた機器選定</li>
-          <li>集客・販促コンテンツの企画提案</li>
-          <li>導入後の運用サポート</li>
-        </ul>
+    <div class="grid-4">
+      <div class="card strength-card">
+        <div class="card-photo"><img src="assets/images/signage.png" alt="デジタルサイネージ"></div>
+        <div class="card-body">
+          <h3>デジタルサイネージ</h3>
+          <p>店舗・オフィス向けの導入で、情報発信力を高め、集客や売上向上をご支援します。</p>
+          <a href="signage.html" class="card-link">詳しく見る →</a>
+        </div>
+      </div>
+      <div class="card strength-card">
+        <div class="card-photo card-photo-contain"><img src="assets/images/app.png" alt="新規集客アプリ"></div>
+        <div class="card-body">
+          <h3>新規集客アプリ</h3>
+          <p>集客アプリの導入・活用支援により、新規顧客の獲得とリピーター増加をサポートします。</p>
+          <a href="app.html" class="card-link">詳しく見る →</a>
+        </div>
+      </div>
+      <div class="card strength-card">
+        <div class="card-photo card-photo-contain"><img src="assets/images/delivery.png" alt="フードデリバリー加盟店募集"></div>
+        <div class="card-body">
+          <h3>フードデリバリー加盟店募集</h3>
+          <p>フードデリバリーサービスへの加盟をサポートし、新たな販路の確保をご支援します。</p>
+          <a href="delivery.html" class="card-link">詳しく見る →</a>
+        </div>
+      </div>
+      <div class="card strength-card">
+        <div class="card-photo card-photo-contain"><img src="assets/images/ai.png" alt="生成AI活用支援"></div>
+        <div class="card-body">
+          <h3>生成AI活用支援</h3>
+          <p>生成AIを活用した業務効率化や販促コンテンツ制作など、DX推進をご支援します。</p>
+          <a href="ai.html" class="card-link">詳しく見る →</a>
+        </div>
       </div>
     </div>
-
-    <div class="biz-block" id="app">
-      <div class="biz-visual"><img src="assets/images/app.png" alt="新規集客アプリ"></div>
-      <div class="biz-content">
-        <span class="biz-number">GROWTH BUSINESS / 02</span>
-        <h2>新規集客アプリ</h2>
-        <p>店舗・企業向けの集客アプリの導入・活用支援により、新規顧客の獲得とリピーター増加をサポートします。</p>
-        <ul>
-          <li>アプリ導入のご提案・設定サポート</li>
-          <li>クーポン・ポイント機能の活用支援</li>
-          <li>運用開始後のフォロー</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="biz-block reverse" id="delivery">
-      <div class="biz-visual"><img src="assets/images/delivery.png" alt="フードデリバリー加盟店募集"></div>
-      <div class="biz-content">
-        <span class="biz-number">GROWTH BUSINESS / 03</span>
-        <h2>フードデリバリー加盟店募集</h2>
-        <p>フードデリバリーサービスへの加盟をサポートし、新たな販路の確保による売上向上をご支援します。</p>
-        <ul>
-          <li>加盟手続きのサポート</li>
-          <li>メニュー登録・運用のアドバイス</li>
-          <li>加盟後の売上フォロー</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="biz-block" id="ai">
-      <div class="biz-visual"><img src="assets/images/ai.png" alt="生成AI活用支援"></div>
-      <div class="biz-content">
-        <span class="biz-number">GROWTH BUSINESS / 04</span>
-        <h2>生成AI活用支援</h2>
-        <p>生成AIを活用した業務効率化や販促コンテンツ制作など、企業のDX推進をご支援します。</p>
-        <ul>
-          <li>業務での活用方法のご提案</li>
-          <li>販促・広告コンテンツ制作支援</li>
-          <li>導入後の運用サポート</li>
-        </ul>
-      </div>
-    </div>
-
   </div>
 </section>
 
