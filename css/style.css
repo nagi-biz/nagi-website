@@ -819,3 +819,27 @@ section { padding: 80px 0; }
   .footer-grid { grid-template-columns: repeat(2, 1fr); }
   .cta-banner { padding: 36px 22px; }
 }
+
+@media (max-width: 560px) {
+  .container { padding: 0 18px; }
+  section { padding: 56px 0; }
+  .grid-4 { grid-template-columns: 1fr; }
+  .flow { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+  .footer-bottom { flex-direction: column; gap: 6px; }
+  .vision-block { padding: 24px 18px; }
+  .vision-block p { font-size: 1.1rem; }
+  .cta-banner { padding: 28px 18px; }
+  .cta-banner .btn-row { flex-direction: column; }
+  .cta-banner .btn-row .btn { width: 100%; justify-content: center; }
+  .info-table th,
+  .info-table td {
+    display: block;
+    width: 100%;
+    padding: 10px 16px;
+  }
+  .info-table th { padding-bottom: 4px; border-bottom: none; }
+  .info-table td { padding-top: 0; padding-bottom: 16px; }
+  .news-item { flex-direction: column; gap: 6px; }
+  .news-date { flex: none; }
+}
