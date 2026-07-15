@@ -7,6 +7,211 @@
 <meta name="description" content="フードデリバリーサービスへの加盟をサポートし、新たな販路の確保をご支援します。">
 <link rel="icon" href="assets/images/logo.png">
 <link rel="stylesheet" href="css/style.css">
+<style>
+.dl-page-container {
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+.dl-section {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+.dl-section-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #991b1b !important;
+    border-left: 5px solid #dc2626;
+    padding-left: 12px;
+    margin: 0 0 20px 0 !important;
+}
+.dl-section-sub {
+    font-size: 15px;
+    color: #475569;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+.dl-about-box {
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+.dl-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+.dl-grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+.dl-stat-box {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 20px 10px;
+    text-align: center;
+}
+.dl-stat-center {
+    background-color: #fef2f2;
+    border-color: #fecaca;
+}
+.dl-stat-num {
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    color: #dc2626;
+}
+.dl-stat-unit { font-size: 14px; }
+.dl-stat-label {
+    display: block;
+    font-size: 13px;
+    color: #475569;
+    margin-top: 5px;
+    font-weight: bold;
+}
+.dl-small-text { font-size: 12px; color: #64748b; }
+.dl-target-item {
+    display: flex;
+    background-color: #f8fafc;
+    border-left: 4px solid #dc2626;
+    padding: 15px;
+    border-radius: 0 8px 8px 0;
+}
+.dl-target-icon { font-size: 28px; margin-right: 15px; display: flex; align-items: center; }
+.dl-target-text strong { display: block; font-size: 15px; color: #0f172a; margin-bottom: 3px; }
+.dl-target-text p { margin: 0; font-size: 13px; color: #64748b; }
+.dl-note-box {
+    background-color: #fef3c7;
+    border: 1px solid #fde68a;
+    border-radius: 8px;
+    padding: 15px 20px;
+    margin-top: 20px;
+    color: #92400e;
+    font-size: 13px;
+}
+.dl-note-box p { margin: 0 0 5px 0; }
+.dl-note-box p:last-child { margin: 0; }
+.dl-hero-band {
+    background: linear-gradient(135deg, #991b1b 0%, #dc2626 55%, #f87171 100%);
+    border-radius: 16px;
+    padding: 36px 30px;
+    margin-top: 24px;
+    text-align: center;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 25px -5px rgba(220, 38, 38, 0.35);
+}
+.dl-hero-band::before {
+    content: "";
+    position: absolute;
+    top: -70px;
+    right: -70px;
+    width: 220px;
+    height: 220px;
+    background: radial-gradient(circle, rgba(255,255,255,0.35) 0%, rgba(255,255,255,0) 70%);
+    border-radius: 50%;
+}
+.dl-hero-band::after {
+    content: "";
+    position: absolute;
+    bottom: -80px;
+    left: -40px;
+    width: 180px;
+    height: 180px;
+    background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 70%);
+    border-radius: 50%;
+}
+.dl-hero-icon { font-size: 42px; display: block; margin-bottom: 10px; position: relative; z-index: 1; }
+.dl-hero-band h2 { font-size: 22px; margin: 0 0 8px 0 !important; color: #ffffff !important; font-weight: bold; position: relative; z-index: 1; }
+.dl-hero-band p { margin: 0; font-size: 14px; opacity: 0.95; position: relative; z-index: 1; }
+.dl-title-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #dc2626, #f87171);
+    color: #ffffff;
+    font-size: 13px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+.dl-benefit-icon-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+.dl-benefit-icon-card {
+    background-color: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 12px;
+    padding: 24px 18px;
+    text-align: center;
+}
+.dl-benefit-icon {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #dc2626, #f87171);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 14px;
+    font-size: 24px;
+    color: #ffffff;
+}
+.dl-benefit-icon-card h3 { font-size: 15px; font-weight: bold; margin: 0 0 8px 0 !important; color: #0f172a !important; }
+.dl-benefit-icon-card p { margin: 0; font-size: 13px; color: #475569; line-height: 1.6; }
+.dl-timeline {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding-top: 6px;
+}
+.dl-timeline::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 8%;
+    right: 8%;
+    height: 3px;
+    background: linear-gradient(90deg, #fecaca, #dc2626, #fecaca);
+    z-index: 0;
+}
+.dl-timeline-item { position: relative; z-index: 1; flex: 1; text-align: center; padding: 0 10px; }
+.dl-timeline-dot {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #dc2626;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 12px;
+    font-weight: bold;
+    font-size: 15px;
+    box-shadow: 0 0 0 6px #fef2f2;
+}
+.dl-timeline-item h3 { font-size: 14px; font-weight: bold; margin: 0 0 6px 0 !important; color: #0f172a !important; }
+.dl-timeline-item p { margin: 0; font-size: 12px; color: #64748b; line-height: 1.6; text-align: left; }
+@media (max-width: 768px) {
+    .dl-section { padding: 20px; }
+    .dl-grid-3, .dl-grid-2 { grid-template-columns: 1fr; gap: 15px; }
+    .dl-hero-band { padding: 28px 20px; }
+    .dl-benefit-icon-grid { grid-template-columns: 1fr; }
+    .dl-timeline { flex-direction: column; gap: 22px; }
+    .dl-timeline::before { display: none; }
+    .dl-timeline-item p { text-align: center; }
+}
+</style>
 </head>
 <body>
 
@@ -61,7 +266,7 @@
 <section>
   <div class="container">
     <div class="biz-block">
-      <div class="biz-visual"><img src="assets/images/delivery.png" alt="フードデリバリー加盟店募集"></div>
+      <div class="biz-visual"><img src="assets/images/delivery.png" alt="フードデリバリー加盟店募集" style="width:100%;"></div>
       <div class="biz-content">
         <span class="biz-number">GROWTH BUSINESS / 03</span>
         <p>フードデリバリーサービスへの加盟をサポートし、新たな販路の確保による売上向上をご支援します。</p>
@@ -71,6 +276,124 @@
           <li>加盟後の売上フォロー</li>
         </ul>
       </div>
+    </div>
+
+    <div class="dl-hero-band">
+      <span class="dl-hero-icon">🛵</span>
+      <h2>座席数の壁を超えて、注文を届ける。</h2>
+      <p>既存の厨房そのままに、フードデリバリー加盟で新たな販路を確保します。</p>
+    </div>
+
+    <div class="dl-page-container" style="margin-top:24px;">
+
+      <div class="dl-section">
+        <h2 class="dl-section-title"><span class="dl-title-icon">🛵</span>フードデリバリー加盟とは？（基本の仕組み）</h2>
+        <div class="dl-about-box">
+          <p>大手フードデリバリープラットフォームに加盟店として登録することで、<strong>店舗の座席数に縛られない新たな販路</strong>を確保できます。</p>
+          <p>加盟手続きやメニュー登録は初めてだと分かりにくい点も多いため、申請サポートから登録内容の最適化まで一貫してご支援します。</p>
+        </div>
+
+        <div class="dl-grid-3">
+          <div class="dl-stat-box">
+            <span class="dl-stat-num">新たな販路</span>
+            <span class="dl-stat-label">店舗外の需要を取り込める</span>
+          </div>
+          <div class="dl-stat-box dl-stat-center">
+            <span class="dl-stat-num">設備投資0</span>
+            <span class="dl-stat-label">既存の厨房・体制で開始可能</span>
+          </div>
+          <div class="dl-stat-box">
+            <span class="dl-stat-num">短期間</span>
+            <span class="dl-stat-label">申請から開始まで対応</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="dl-section">
+        <h2 class="dl-section-title"><span class="dl-title-icon">🛵</span>導入による3つのメリット</h2>
+
+        <div class="dl-benefit-icon-grid">
+          <div class="dl-benefit-icon-card">
+            <div class="dl-benefit-icon">🪑</div>
+            <h3>座席数に左右されない売上機会</h3>
+            <p>イートインの客数に関係なく注文を受けられるため、ピークタイムの機会損失を減らせます。</p>
+          </div>
+          <div class="dl-benefit-icon-card">
+            <div class="dl-benefit-icon">📝</div>
+            <h3>加盟手続きを代行サポート</h3>
+            <p>プラットフォームごとに異なる申請書類やメニュー登録作業を、経験豊富なスタッフがサポートします。<br><span class="dl-small-text">※対応可能なプラットフォームはお問い合わせ時にご案内します。</span></p>
+          </div>
+          <div class="dl-benefit-icon-card">
+            <div class="dl-benefit-icon">📸</div>
+            <h3>注文数を最大化する最適化</h3>
+            <p>アプリ内での見え方や商品構成を見直すことで、同じ集客でも注文率を高める工夫をご提案します。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="dl-section">
+        <h2 class="dl-section-title"><span class="dl-title-icon">🛵</span>このような店舗で特に効果を発揮します</h2>
+        <p class="dl-section-sub">既存の厨房設備を活かして新たな売上を作りたい店舗に最適です。</p>
+
+        <div class="dl-grid-2">
+          <div class="dl-target-item">
+            <div class="dl-target-icon">🍜</div>
+            <div class="dl-target-text">
+              <strong>飲食店全般</strong>
+              <p>持ち帰り・配達に対応できるメニューを持つ店舗</p>
+            </div>
+          </div>
+          <div class="dl-target-item">
+            <div class="dl-target-icon">🍞</div>
+            <div class="dl-target-text">
+              <strong>弁当・惣菜・ベーカリー</strong>
+              <p>店舗販売に加えて配達需要を取り込みたい店舗</p>
+            </div>
+          </div>
+          <div class="dl-target-item">
+            <div class="dl-target-icon">☕</div>
+            <div class="dl-target-text">
+              <strong>カフェ・喫茶店</strong>
+              <p>アイドルタイムの売上を底上げしたい店舗</p>
+            </div>
+          </div>
+          <div class="dl-target-item">
+            <div class="dl-target-icon">🏪</div>
+            <div class="dl-target-text">
+              <strong>新規開業店舗</strong>
+              <p>開業当初から複数の販路を確保したい店舗</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="dl-section">
+        <h2 class="dl-section-title"><span class="dl-title-icon">🛵</span>加盟までのステップ</h2>
+
+        <div class="dl-timeline">
+          <div class="dl-timeline-item">
+            <div class="dl-timeline-dot">1</div>
+            <h3>無料相談</h3>
+            <p>店舗の状況や希望するプラットフォームをヒアリングします。</p>
+          </div>
+          <div class="dl-timeline-item">
+            <div class="dl-timeline-dot">2</div>
+            <h3>加盟申請・メニュー登録</h3>
+            <p>必要書類の準備からメニュー写真・価格設定の登録までサポートします。</p>
+          </div>
+          <div class="dl-timeline-item">
+            <div class="dl-timeline-dot">3</div>
+            <h3>提供開始・売上フォロー</h3>
+            <p>提供開始後も注文状況を確認しながら、メニューや価格の改善を継続的にサポートします。</p>
+          </div>
+        </div>
+
+        <div class="dl-note-box">
+          <p>※加盟条件・審査基準はプラットフォームにより異なります。</p>
+          <p>※まずはお気軽にお問い合わせください。現在のメニュー内容をお聞かせください。</p>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>

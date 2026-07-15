@@ -7,6 +7,211 @@
 <meta name="description" content="店舗・オフィス向けデジタルサイネージの導入で、情報発信力を高め、集客や売上向上をご支援します。">
 <link rel="icon" href="assets/images/logo.png">
 <link rel="stylesheet" href="css/style.css">
+<style>
+.sg-page-container {
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+.sg-section {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+.sg-section-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #831843 !important;
+    border-left: 5px solid #db2777;
+    padding-left: 12px;
+    margin: 0 0 20px 0 !important;
+}
+.sg-section-sub {
+    font-size: 15px;
+    color: #475569;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+.sg-about-box {
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+.sg-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+.sg-grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+.sg-stat-box {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 20px 10px;
+    text-align: center;
+}
+.sg-stat-center {
+    background-color: #fdf2f8;
+    border-color: #fbcfe8;
+}
+.sg-stat-num {
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    color: #db2777;
+}
+.sg-stat-unit { font-size: 14px; }
+.sg-stat-label {
+    display: block;
+    font-size: 13px;
+    color: #475569;
+    margin-top: 5px;
+    font-weight: bold;
+}
+.sg-small-text { font-size: 12px; color: #64748b; }
+.sg-target-item {
+    display: flex;
+    background-color: #f8fafc;
+    border-left: 4px solid #db2777;
+    padding: 15px;
+    border-radius: 0 8px 8px 0;
+}
+.sg-target-icon { font-size: 28px; margin-right: 15px; display: flex; align-items: center; }
+.sg-target-text strong { display: block; font-size: 15px; color: #0f172a; margin-bottom: 3px; }
+.sg-target-text p { margin: 0; font-size: 13px; color: #64748b; }
+.sg-note-box {
+    background-color: #fef3c7;
+    border: 1px solid #fde68a;
+    border-radius: 8px;
+    padding: 15px 20px;
+    margin-top: 20px;
+    color: #92400e;
+    font-size: 13px;
+}
+.sg-note-box p { margin: 0 0 5px 0; }
+.sg-note-box p:last-child { margin: 0; }
+.sg-hero-band {
+    background: linear-gradient(135deg, #831843 0%, #db2777 55%, #f472b6 100%);
+    border-radius: 16px;
+    padding: 36px 30px;
+    margin-top: 24px;
+    text-align: center;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 25px -5px rgba(219, 39, 119, 0.35);
+}
+.sg-hero-band::before {
+    content: "";
+    position: absolute;
+    top: -70px;
+    right: -70px;
+    width: 220px;
+    height: 220px;
+    background: radial-gradient(circle, rgba(255,255,255,0.35) 0%, rgba(255,255,255,0) 70%);
+    border-radius: 50%;
+}
+.sg-hero-band::after {
+    content: "";
+    position: absolute;
+    bottom: -80px;
+    left: -40px;
+    width: 180px;
+    height: 180px;
+    background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 70%);
+    border-radius: 50%;
+}
+.sg-hero-icon { font-size: 42px; display: block; margin-bottom: 10px; position: relative; z-index: 1; }
+.sg-hero-band h2 { font-size: 22px; margin: 0 0 8px 0 !important; color: #ffffff !important; font-weight: bold; position: relative; z-index: 1; }
+.sg-hero-band p { margin: 0; font-size: 14px; opacity: 0.95; position: relative; z-index: 1; }
+.sg-title-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #db2777, #f472b6);
+    color: #ffffff;
+    font-size: 13px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+.sg-benefit-icon-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+.sg-benefit-icon-card {
+    background-color: #fdf2f8;
+    border: 1px solid #fbcfe8;
+    border-radius: 12px;
+    padding: 24px 18px;
+    text-align: center;
+}
+.sg-benefit-icon {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #db2777, #f472b6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 14px;
+    font-size: 24px;
+    color: #ffffff;
+}
+.sg-benefit-icon-card h3 { font-size: 15px; font-weight: bold; margin: 0 0 8px 0 !important; color: #0f172a !important; }
+.sg-benefit-icon-card p { margin: 0; font-size: 13px; color: #475569; line-height: 1.6; }
+.sg-timeline {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding-top: 6px;
+}
+.sg-timeline::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 8%;
+    right: 8%;
+    height: 3px;
+    background: linear-gradient(90deg, #fbcfe8, #db2777, #fbcfe8);
+    z-index: 0;
+}
+.sg-timeline-item { position: relative; z-index: 1; flex: 1; text-align: center; padding: 0 10px; }
+.sg-timeline-dot {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #db2777;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 12px;
+    font-weight: bold;
+    font-size: 15px;
+    box-shadow: 0 0 0 6px #fdf2f8;
+}
+.sg-timeline-item h3 { font-size: 14px; font-weight: bold; margin: 0 0 6px 0 !important; color: #0f172a !important; }
+.sg-timeline-item p { margin: 0; font-size: 12px; color: #64748b; line-height: 1.6; text-align: left; }
+@media (max-width: 768px) {
+    .sg-section { padding: 20px; }
+    .sg-grid-3, .sg-grid-2 { grid-template-columns: 1fr; gap: 15px; }
+    .sg-hero-band { padding: 28px 20px; }
+    .sg-benefit-icon-grid { grid-template-columns: 1fr; }
+    .sg-timeline { flex-direction: column; gap: 22px; }
+    .sg-timeline::before { display: none; }
+    .sg-timeline-item p { text-align: center; }
+}
+</style>
 </head>
 <body>
 
@@ -71,6 +276,124 @@
           <li>導入後の運用サポート</li>
         </ul>
       </div>
+    </div>
+
+    <div class="sg-hero-band">
+      <span class="sg-hero-icon">🖥️</span>
+      <h2>画面ひとつで、伝わり方が変わる。</h2>
+      <p>紙のポスターに代わる電子看板で、集客・販促の情報発信力を高めます。</p>
+    </div>
+
+    <div class="sg-page-container" style="margin-top:24px;">
+
+      <div class="sg-section">
+        <h2 class="sg-section-title"><span class="sg-title-icon">🖥️</span>デジタルサイネージとは？（基本の仕組み）</h2>
+        <div class="sg-about-box">
+          <p>デジタルサイネージは、ディスプレイに映像やスライドを表示して情報発信を行う電子看板です。紙のポスターと異なり、<strong>インターネット経由でいつでも表示内容を更新</strong>でき、複数店舗の情報を一括で管理・配信することも可能です。</p>
+          <p>店頭・店内・待合スペースなど設置場所に応じて、集客・販促・案内など目的別にコンテンツを使い分けられます。</p>
+        </div>
+
+        <div class="sg-grid-3">
+          <div class="sg-stat-box">
+            <span class="sg-stat-num">遠隔更新</span>
+            <span class="sg-stat-label">配信内容をいつでも変更可能</span>
+          </div>
+          <div class="sg-stat-box sg-stat-center">
+            <span class="sg-stat-num">一括管理</span>
+            <span class="sg-stat-label">複数店舗の情報も一元配信</span>
+          </div>
+          <div class="sg-stat-box">
+            <span class="sg-stat-num">印刷費0</span>
+            <span class="sg-stat-label">ポスター等の印刷コスト削減</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sg-section">
+        <h2 class="sg-section-title"><span class="sg-title-icon">🖥️</span>導入による3つのメリット</h2>
+
+        <div class="sg-benefit-icon-grid">
+          <div class="sg-benefit-icon-card">
+            <div class="sg-benefit-icon">📢</div>
+            <h3>情報発信力の強化</h3>
+            <p>キャンペーンや新商品情報を映像で目立たせることで、通行客・来店客の目を引きやすくなります。</p>
+          </div>
+          <div class="sg-benefit-icon-card">
+            <div class="sg-benefit-icon">🖨️</div>
+            <h3>印刷コスト・手間を削減</h3>
+            <p>ポスターやメニュー表の印刷・貼り替え作業が不要になり、季節や時間帯に応じた表示切り替えも簡単です。<br><span class="sg-small-text">※インターネット経由で遠隔更新できます。</span></p>
+          </div>
+          <div class="sg-benefit-icon-card">
+            <div class="sg-benefit-icon">🌐</div>
+            <h3>複数拠点を一元管理</h3>
+            <p>本部から全店舗に一斉配信できるため、店舗ごとの案内内容の統一やキャンペーンの一斉展開がスムーズに行えます。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="sg-section">
+        <h2 class="sg-section-title"><span class="sg-title-icon">🖥️</span>このような施設・業種で特に効果を発揮します</h2>
+        <p class="sg-section-sub">来店客・通行客への情報発信を強化したい施設に最適です。</p>
+
+        <div class="sg-grid-2">
+          <div class="sg-target-item">
+            <div class="sg-target-icon">🍽️</div>
+            <div class="sg-target-text">
+              <strong>飲食店</strong>
+              <p>メニュー表示やおすすめ商品のプロモーションに</p>
+            </div>
+          </div>
+          <div class="sg-target-item">
+            <div class="sg-target-icon">🏬</div>
+            <div class="sg-target-text">
+              <strong>小売店舗・商業施設</strong>
+              <p>セール情報や新商品案内をタイムリーに発信</p>
+            </div>
+          </div>
+          <div class="sg-target-item">
+            <div class="sg-target-icon">🏢</div>
+            <div class="sg-target-text">
+              <strong>オフィス・受付</strong>
+              <p>来訪者への案内表示、会議室の予約状況表示</p>
+            </div>
+          </div>
+          <div class="sg-target-item">
+            <div class="sg-target-icon">🏥</div>
+            <div class="sg-target-text">
+              <strong>医療機関・公共施設</strong>
+              <p>待合スペースでの案内・呼び出し表示</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sg-section">
+        <h2 class="sg-section-title"><span class="sg-title-icon">🖥️</span>導入までのステップ</h2>
+
+        <div class="sg-timeline">
+          <div class="sg-timeline-item">
+            <div class="sg-timeline-dot">1</div>
+            <h3>無料相談</h3>
+            <p>設置目的・場所をヒアリングし、最適な機器構成をご提案します。</p>
+          </div>
+          <div class="sg-timeline-item">
+            <div class="sg-timeline-dot">2</div>
+            <h3>コンテンツ企画・設置</h3>
+            <p>集客・販促効果を高めるコンテンツを企画し、機器の設置工事を行います。</p>
+          </div>
+          <div class="sg-timeline-item">
+            <div class="sg-timeline-dot">3</div>
+            <h3>運用開始・更新サポート</h3>
+            <p>配信開始後もコンテンツの更新・改善をサポートし、効果を継続的に高めます。</p>
+          </div>
+        </div>
+
+        <div class="sg-note-box">
+          <p>※機器構成・費用は設置台数や画面サイズにより異なります。</p>
+          <p>※まずはお気軽にお問い合わせください。設置場所の写真があるとご提案がスムーズです。</p>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>

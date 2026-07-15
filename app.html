@@ -7,6 +7,211 @@
 <meta name="description" content="集客アプリの導入・活用支援により、新規顧客の獲得とリピーター増加をサポートします。">
 <link rel="icon" href="assets/images/logo.png">
 <link rel="stylesheet" href="css/style.css">
+<style>
+.ap-page-container {
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+.ap-section {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+.ap-section-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #5b21b6 !important;
+    border-left: 5px solid #8b5cf6;
+    padding-left: 12px;
+    margin: 0 0 20px 0 !important;
+}
+.ap-section-sub {
+    font-size: 15px;
+    color: #475569;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+.ap-about-box {
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+.ap-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+.ap-grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+.ap-stat-box {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 20px 10px;
+    text-align: center;
+}
+.ap-stat-center {
+    background-color: #f5f3ff;
+    border-color: #ddd6fe;
+}
+.ap-stat-num {
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    color: #8b5cf6;
+}
+.ap-stat-unit { font-size: 14px; }
+.ap-stat-label {
+    display: block;
+    font-size: 13px;
+    color: #475569;
+    margin-top: 5px;
+    font-weight: bold;
+}
+.ap-small-text { font-size: 12px; color: #64748b; }
+.ap-target-item {
+    display: flex;
+    background-color: #f8fafc;
+    border-left: 4px solid #8b5cf6;
+    padding: 15px;
+    border-radius: 0 8px 8px 0;
+}
+.ap-target-icon { font-size: 28px; margin-right: 15px; display: flex; align-items: center; }
+.ap-target-text strong { display: block; font-size: 15px; color: #0f172a; margin-bottom: 3px; }
+.ap-target-text p { margin: 0; font-size: 13px; color: #64748b; }
+.ap-note-box {
+    background-color: #fef3c7;
+    border: 1px solid #fde68a;
+    border-radius: 8px;
+    padding: 15px 20px;
+    margin-top: 20px;
+    color: #92400e;
+    font-size: 13px;
+}
+.ap-note-box p { margin: 0 0 5px 0; }
+.ap-note-box p:last-child { margin: 0; }
+.ap-hero-band {
+    background: linear-gradient(135deg, #5b21b6 0%, #8b5cf6 55%, #c4b5fd 100%);
+    border-radius: 16px;
+    padding: 36px 30px;
+    margin-top: 24px;
+    text-align: center;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 25px -5px rgba(139, 92, 246, 0.35);
+}
+.ap-hero-band::before {
+    content: "";
+    position: absolute;
+    top: -70px;
+    right: -70px;
+    width: 220px;
+    height: 220px;
+    background: radial-gradient(circle, rgba(255,255,255,0.35) 0%, rgba(255,255,255,0) 70%);
+    border-radius: 50%;
+}
+.ap-hero-band::after {
+    content: "";
+    position: absolute;
+    bottom: -80px;
+    left: -40px;
+    width: 180px;
+    height: 180px;
+    background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 70%);
+    border-radius: 50%;
+}
+.ap-hero-icon { font-size: 42px; display: block; margin-bottom: 10px; position: relative; z-index: 1; }
+.ap-hero-band h2 { font-size: 22px; margin: 0 0 8px 0 !important; color: #ffffff !important; font-weight: bold; position: relative; z-index: 1; }
+.ap-hero-band p { margin: 0; font-size: 14px; opacity: 0.95; position: relative; z-index: 1; }
+.ap-title-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #8b5cf6, #c4b5fd);
+    color: #ffffff;
+    font-size: 13px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+.ap-benefit-icon-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+.ap-benefit-icon-card {
+    background-color: #f5f3ff;
+    border: 1px solid #ddd6fe;
+    border-radius: 12px;
+    padding: 24px 18px;
+    text-align: center;
+}
+.ap-benefit-icon {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #8b5cf6, #c4b5fd);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 14px;
+    font-size: 24px;
+    color: #ffffff;
+}
+.ap-benefit-icon-card h3 { font-size: 15px; font-weight: bold; margin: 0 0 8px 0 !important; color: #0f172a !important; }
+.ap-benefit-icon-card p { margin: 0; font-size: 13px; color: #475569; line-height: 1.6; }
+.ap-timeline {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding-top: 6px;
+}
+.ap-timeline::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 8%;
+    right: 8%;
+    height: 3px;
+    background: linear-gradient(90deg, #ddd6fe, #8b5cf6, #ddd6fe);
+    z-index: 0;
+}
+.ap-timeline-item { position: relative; z-index: 1; flex: 1; text-align: center; padding: 0 10px; }
+.ap-timeline-dot {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #8b5cf6;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 12px;
+    font-weight: bold;
+    font-size: 15px;
+    box-shadow: 0 0 0 6px #f5f3ff;
+}
+.ap-timeline-item h3 { font-size: 14px; font-weight: bold; margin: 0 0 6px 0 !important; color: #0f172a !important; }
+.ap-timeline-item p { margin: 0; font-size: 12px; color: #64748b; line-height: 1.6; text-align: left; }
+@media (max-width: 768px) {
+    .ap-section { padding: 20px; }
+    .ap-grid-3, .ap-grid-2 { grid-template-columns: 1fr; gap: 15px; }
+    .ap-hero-band { padding: 28px 20px; }
+    .ap-benefit-icon-grid { grid-template-columns: 1fr; }
+    .ap-timeline { flex-direction: column; gap: 22px; }
+    .ap-timeline::before { display: none; }
+    .ap-timeline-item p { text-align: center; }
+}
+</style>
 </head>
 <body>
 
@@ -71,6 +276,124 @@
           <li>運用開始後のフォロー</li>
         </ul>
       </div>
+    </div>
+
+    <div class="ap-hero-band">
+      <span class="ap-hero-icon">📲</span>
+      <h2>アプリで、また来たくなる仕組みを。</h2>
+      <p>クーポン・ポイント・プッシュ通知で、新規獲得とリピーター育成を同時に進めます。</p>
+    </div>
+
+    <div class="ap-page-container" style="margin-top:24px;">
+
+      <div class="ap-section">
+        <h2 class="ap-section-title"><span class="ap-title-icon">📲</span>新規集客アプリとは？（基本の仕組み）</h2>
+        <div class="ap-about-box">
+          <p>スマートフォンアプリを通じて、来店を促すクーポンやポイント、プッシュ通知による最新情報の発信を行い、<strong>新規顧客の獲得とリピーターの育成</strong>を同時に進める仕組みです。</p>
+          <p>会員登録・来店履歴・購買データを蓄積できるため、感覚ではなくデータに基づいた集客施策を打てるようになります。</p>
+        </div>
+
+        <div class="ap-grid-3">
+          <div class="ap-stat-box">
+            <span class="ap-stat-num">プッシュ通知</span>
+            <span class="ap-stat-label">最新情報を直接届けられる</span>
+          </div>
+          <div class="ap-stat-box ap-stat-center">
+            <span class="ap-stat-num">クーポン・ポイント</span>
+            <span class="ap-stat-label">再来店を後押しする仕組み</span>
+          </div>
+          <div class="ap-stat-box">
+            <span class="ap-stat-num">データ蓄積</span>
+            <span class="ap-stat-label">来店・購買履歴を可視化</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ap-section">
+        <h2 class="ap-section-title"><span class="ap-title-icon">📲</span>導入による3つのメリット</h2>
+
+        <div class="ap-benefit-icon-grid">
+          <div class="ap-benefit-icon-card">
+            <div class="ap-benefit-icon">🎯</div>
+            <h3>新規顧客の獲得チャネルを拡大</h3>
+            <p>アプリストアやSNS経由での認知拡大により、これまでリーチできなかった層への集客が可能になります。</p>
+          </div>
+          <div class="ap-benefit-icon-card">
+            <div class="ap-benefit-icon">🎟️</div>
+            <h3>リピーターを育成</h3>
+            <p>再来店を促す特典を設計することで、一度きりの来店客をリピーターへと育てます。<br><span class="ap-small-text">※特典内容は業種・目的に応じて設計します。</span></p>
+          </div>
+          <div class="ap-benefit-icon-card">
+            <div class="ap-benefit-icon">📊</div>
+            <h3>データで販促を最適化</h3>
+            <p>会員属性や来店頻度のデータをもとに、効果的なタイミング・内容でのプッシュ通知配信が行えます。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="ap-section">
+        <h2 class="ap-section-title"><span class="ap-title-icon">📲</span>このような業種で特に効果を発揮します</h2>
+        <p class="ap-section-sub">リピーター獲得や新規顧客の来店促進を強化したい業種に最適です。</p>
+
+        <div class="ap-grid-2">
+          <div class="ap-target-item">
+            <div class="ap-target-icon">🍽️</div>
+            <div class="ap-target-text">
+              <strong>飲食店</strong>
+              <p>ランチ・ディナー時間帯の来店促進に</p>
+            </div>
+          </div>
+          <div class="ap-target-item">
+            <div class="ap-target-icon">💇</div>
+            <div class="ap-target-text">
+              <strong>美容室・サロン</strong>
+              <p>次回予約・リピート来店の促進に</p>
+            </div>
+          </div>
+          <div class="ap-target-item">
+            <div class="ap-target-icon">🏬</div>
+            <div class="ap-target-text">
+              <strong>小売店舗</strong>
+              <p>セール告知やポイント還元で再来店を喚起</p>
+            </div>
+          </div>
+          <div class="ap-target-item">
+            <div class="ap-target-icon">🏋️</div>
+            <div class="ap-target-text">
+              <strong>フィットネス・スクール</strong>
+              <p>会員の継続率向上、体験入会からの転換促進</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ap-section">
+        <h2 class="ap-section-title"><span class="ap-title-icon">📲</span>導入までのステップ</h2>
+
+        <div class="ap-timeline">
+          <div class="ap-timeline-item">
+            <div class="ap-timeline-dot">1</div>
+            <h3>無料相談</h3>
+            <p>集客課題や目的をヒアリングし、必要な機能を整理します。</p>
+          </div>
+          <div class="ap-timeline-item">
+            <div class="ap-timeline-dot">2</div>
+            <h3>設定・コンテンツ準備</h3>
+            <p>クーポン・ポイント設計やアプリの初期設定をサポートします。</p>
+          </div>
+          <div class="ap-timeline-item">
+            <div class="ap-timeline-dot">3</div>
+            <h3>運用開始・改善サポート</h3>
+            <p>配信効果をモニタリングしながら、施策の改善を継続的にサポートします。</p>
+          </div>
+        </div>
+
+        <div class="ap-note-box">
+          <p>※効果は業種・運用方法により異なります。</p>
+          <p>※まずはお気軽にお問い合わせください。現在の集客課題をお聞かせください。</p>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>

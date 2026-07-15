@@ -7,6 +7,358 @@
 <meta name="description" content="業務用空調設備の省エネ化により、電気代のコスト削減をご提案する、梛合同会社の主力事業です。">
 <link rel="icon" href="assets/images/logo.png">
 <link rel="stylesheet" href="css/style.css">
+<style>
+.en-page-container {
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+.en-section {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+.en-section-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #075985 !important;
+    border-left: 5px solid #0ea5e9;
+    padding-left: 12px;
+    margin: 0 0 20px 0 !important;
+}
+.en-section-sub {
+    font-size: 15px;
+    color: #475569;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+.en-about-box {
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+.en-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+.en-grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+.en-stat-box {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 20px 10px;
+    text-align: center;
+}
+.en-stat-center {
+    background-color: #e0f2fe;
+    border-color: #7dd3fc;
+}
+.en-stat-num {
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    color: #0ea5e9;
+}
+.en-stat-unit { font-size: 14px; }
+.en-stat-label {
+    display: block;
+    font-size: 13px;
+    color: #475569;
+    margin-top: 5px;
+    font-weight: bold;
+}
+.en-benefit-card {
+    display: flex;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+.en-benefit-badge {
+    background-color: #075985;
+    color: #ffffff;
+    font-weight: bold;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 14px;
+    padding: 10px;
+    flex-shrink: 0;
+}
+.en-benefit-content { padding: 20px; }
+.en-benefit-content h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 0 8px 0 !important;
+    color: #0f172a !important;
+}
+.en-benefit-content p { margin: 0; font-size: 14px; color: #475569; }
+.en-small-text { font-size: 12px; color: #64748b; }
+.en-device-card {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 20px;
+}
+.en-device-card h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 0 8px 0 !important;
+    color: #0f172a !important;
+}
+.en-device-card p { margin: 0; font-size: 13px; color: #64748b; }
+.en-problem-flow {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    align-items: stretch;
+    margin-bottom: 10px;
+}
+.en-problem-step {
+    background-color: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    position: relative;
+}
+.en-problem-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    background-color: #dc2626;
+    color: #ffffff;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+.en-problem-step p { margin: 0; font-size: 13px; color: #0f172a; font-weight: bold; line-height: 1.5; }
+.en-problem-arrow { display: flex; align-items: center; justify-content: center; color: #cbd5e1; font-size: 20px; }
+.en-case-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+.en-case-card {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+}
+.en-case-head {
+    background-color: #075985;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 13px;
+    padding: 10px 6px;
+    line-height: 1.4;
+}
+.en-case-body { padding: 15px 8px; }
+.en-case-rate-label { font-size: 11px; color: #64748b; }
+.en-case-rate { font-size: 26px; font-weight: bold; color: #0ea5e9; margin: 2px 0 8px 0; }
+.en-case-spec { font-size: 11px; color: #64748b; line-height: 1.5; }
+.en-install-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+.en-install-card {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 20px;
+}
+.en-install-card h3 {
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0 0 12px 0 !important;
+    color: #0f172a !important;
+}
+.en-install-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    padding: 7px 0;
+    border-bottom: 1px dashed #e2e8f0;
+}
+.en-install-row:last-child { border-bottom: none; }
+.en-install-row .en-install-label { color: #64748b; }
+.en-install-row .en-install-value { font-weight: bold; color: #0f172a; }
+.en-install-value.en-highlight { color: #0ea5e9; }
+.en-target-item {
+    display: flex;
+    background-color: #f8fafc;
+    border-left: 4px solid #0ea5e9;
+    padding: 15px;
+    border-radius: 0 8px 8px 0;
+}
+.en-target-icon { font-size: 28px; margin-right: 15px; display: flex; align-items: center; }
+.en-target-text strong { display: block; font-size: 15px; color: #0f172a; margin-bottom: 3px; }
+.en-target-text p { margin: 0; font-size: 13px; color: #64748b; }
+.en-flow-step {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+}
+.en-flow-num {
+    display: inline-block;
+    background-color: #0ea5e9;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 2px 12px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+.en-flow-step h3 { font-size: 16px; font-weight: bold; margin: 0 0 10px 0 !important; color: #0f172a !important; }
+.en-flow-step p { margin: 0; font-size: 13px; color: #64748b; text-align: left; }
+.en-note-box {
+    background-color: #fef3c7;
+    border: 1px solid #fde68a;
+    border-radius: 8px;
+    padding: 15px 20px;
+    margin-top: 20px;
+    color: #92400e;
+    font-size: 13px;
+}
+.en-note-box p { margin: 0 0 5px 0; }
+.en-note-box p:last-child { margin: 0; }
+.en-hero-band {
+    background: linear-gradient(135deg, #075985 0%, #0ea5e9 55%, #7dd3fc 100%);
+    border-radius: 16px;
+    padding: 36px 30px;
+    margin-top: 24px;
+    text-align: center;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 25px -5px rgba(14, 165, 233, 0.35);
+}
+.en-hero-band::before {
+    content: "";
+    position: absolute;
+    top: -70px;
+    right: -70px;
+    width: 220px;
+    height: 220px;
+    background: radial-gradient(circle, rgba(255,255,255,0.35) 0%, rgba(255,255,255,0) 70%);
+    border-radius: 50%;
+}
+.en-hero-band::after {
+    content: "";
+    position: absolute;
+    bottom: -80px;
+    left: -40px;
+    width: 180px;
+    height: 180px;
+    background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 70%);
+    border-radius: 50%;
+}
+.en-hero-icon { font-size: 42px; display: block; margin-bottom: 10px; position: relative; z-index: 1; }
+.en-hero-band h2 { font-size: 22px; margin: 0 0 8px 0 !important; color: #ffffff !important; font-weight: bold; position: relative; z-index: 1; }
+.en-hero-band p { margin: 0; font-size: 14px; opacity: 0.95; position: relative; z-index: 1; }
+.en-title-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #0ea5e9, #7dd3fc);
+    color: #ffffff;
+    font-size: 13px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+.en-benefit-icon-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+.en-benefit-icon-card {
+    background-color: #e0f2fe;
+    border: 1px solid #7dd3fc;
+    border-radius: 12px;
+    padding: 24px 18px;
+    text-align: center;
+}
+.en-benefit-icon {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #0ea5e9, #7dd3fc);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 14px;
+    font-size: 24px;
+    color: #ffffff;
+}
+.en-benefit-icon-card h3 { font-size: 15px; font-weight: bold; margin: 0 0 8px 0 !important; color: #0f172a !important; }
+.en-benefit-icon-card p { margin: 0; font-size: 13px; color: #475569; line-height: 1.6; }
+.en-timeline {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding-top: 6px;
+}
+.en-timeline::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 8%;
+    right: 8%;
+    height: 3px;
+    background: linear-gradient(90deg, #7dd3fc, #0ea5e9, #7dd3fc);
+    z-index: 0;
+}
+.en-timeline-item { position: relative; z-index: 1; flex: 1; text-align: center; padding: 0 10px; }
+.en-timeline-dot {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #0ea5e9;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 12px;
+    font-weight: bold;
+    font-size: 15px;
+    box-shadow: 0 0 0 6px #e0f2fe;
+}
+.en-timeline-item h3 { font-size: 14px; font-weight: bold; margin: 0 0 6px 0 !important; color: #0f172a !important; }
+.en-timeline-item p { margin: 0; font-size: 12px; color: #64748b; line-height: 1.6; text-align: left; }
+@media (max-width: 768px) {
+    .en-section { padding: 20px; }
+    .en-grid-3, .en-grid-2 { grid-template-columns: 1fr; gap: 15px; }
+    .en-hero-band { padding: 28px 20px; }
+    .en-benefit-icon-grid { grid-template-columns: 1fr; }
+    .en-problem-flow { grid-template-columns: 1fr; }
+    .en-problem-arrow { transform: rotate(90deg); }
+    .en-case-grid { grid-template-columns: repeat(2, 1fr); }
+    .en-install-grid { grid-template-columns: 1fr; }
+    .en-timeline { flex-direction: column; gap: 22px; }
+    .en-timeline::before { display: none; }
+    .en-timeline-item p { text-align: center; }
+}
+</style>
 </head>
 <body>
 
@@ -71,6 +423,222 @@
           <li>導入後の運用フォロー</li>
         </ul>
       </div>
+    </div>
+
+    <div class="en-hero-band">
+      <span class="en-hero-icon">🌡️</span>
+      <h2>その温度差が、電気代を上げている。</h2>
+      <p>設備はそのまま、センサー制御で空調の電気代を平均25〜35%削減します。</p>
+    </div>
+
+    <div class="en-page-container" style="margin-top:24px;">
+
+      <div class="en-section">
+        <h2 class="en-section-title"><span class="en-title-icon">🌡️</span>なぜ電気を消費してしまうのか？（課題）</h2>
+        <p class="en-section-sub">空調・冷蔵（冷凍）の機器は、設定温度と実際の温度が異なっていることが多く、必要以上に電気を消費しているケースが少なくありません。</p>
+
+        <div class="en-problem-flow">
+          <div class="en-problem-step">
+            <span class="en-problem-num">1</span>
+            <p>設定温度と実際の温度が異なるケースが多い</p>
+          </div>
+          <div class="en-problem-arrow">▶</div>
+          <div class="en-problem-step">
+            <span class="en-problem-num">2</span>
+            <p>設定温度以上の温度で運転しコンプレッサー負荷が増加</p>
+          </div>
+        </div>
+        <div class="en-problem-flow" style="grid-template-columns: 1fr;">
+          <div class="en-problem-step" style="background-color:#fee2e2;border-color:#fca5a5;">
+            <span class="en-problem-num">3</span>
+            <p>過度な電気を消費している（例：設定温度20℃に対し実際の温度18℃）</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="en-section">
+        <h2 class="en-section-title"><span class="en-title-icon">🌡️</span>解決の仕組み（センサー制御）</h2>
+        <div class="en-about-box">
+          <p>本サービスでは室外機に<strong>センサーを取り付け、最適な温度調整をコンデンサーへ指示・制御</strong>することで、余計な電力消費を抑えます。</p>
+          <p>①センサーで現状の温度を測定 → ②最適な温度設定をコンデンサーへ指示 → ③必要以上の電力消耗を抑制、という3ステップで電力を削減します。既存のエアコン本体・冷媒回路はそのまま活かせるため、<strong>設備の入れ替えなしで電気代を削減</strong>できるのが特長です。</p>
+        </div>
+
+        <div class="en-grid-3">
+          <div class="en-stat-box en-stat-center">
+            <span class="en-stat-num">平均25〜35<span class="en-stat-unit">%</span></span>
+            <span class="en-stat-label">電気代の削減率</span>
+          </div>
+          <div class="en-stat-box">
+            <span class="en-stat-num">全メーカー対応</span>
+            <span class="en-stat-label">空調メーカーを問わず設置可能</span>
+          </div>
+          <div class="en-stat-box">
+            <span class="en-stat-num">取り付けのみ</span>
+            <span class="en-stat-label">機器改造不要・取り外しも可能</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="en-section">
+        <h2 class="en-section-title"><span class="en-title-icon">🌡️</span>導入による3つのメリット</h2>
+
+        <div class="en-benefit-icon-grid">
+          <div class="en-benefit-icon-card">
+            <div class="en-benefit-icon">📉</div>
+            <h3>電気料金を平均25〜35%削減</h3>
+            <p>毎月の電気料金を継続的に削減しながら、CO2排出量の削減にもつながり、SDGsへの取り組みとしてもアピールできます。</p>
+          </div>
+          <div class="en-benefit-icon-card">
+            <div class="en-benefit-icon">🛠️</div>
+            <h3>設備への負荷なし・メンテナンス不要</h3>
+            <p>既存機器を改造しないため、取り付け後も故障時の保証範囲に影響を与えません。取り外しも可能です。</p>
+          </div>
+          <div class="en-benefit-icon-card">
+            <div class="en-benefit-icon">📶</div>
+            <h3>全空調メーカー対応・スマホで設定可能</h3>
+            <p>メーカーを問わず既存の空調・冷蔵（冷凍）設備に後付けでき、設定確認や操作はスマートフォンから簡単に行えます。<br><span class="en-small-text">※対応可否は設備により異なります。</span></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="en-section">
+        <h2 class="en-section-title"><span class="en-title-icon">🌡️</span>導入実績（削減事例）</h2>
+        <p class="en-section-sub">様々な業界・業種にて電気コストの削減を実施しています。</p>
+
+        <div class="en-case-grid">
+          <div class="en-case-card">
+            <div class="en-case-head">TSUTAYA<br>賀来店</div>
+            <div class="en-case-body">
+              <span class="en-case-rate-label">削減率</span>
+              <div class="en-case-rate">37.8%</div>
+              <div class="en-case-spec">エアコン：天井カセット型<br>日立製 RCI-P140KG</div>
+            </div>
+          </div>
+          <div class="en-case-card">
+            <div class="en-case-head">かりゆし<br>Hotels</div>
+            <div class="en-case-body">
+              <span class="en-case-rate-label">削減率</span>
+              <div class="en-case-rate">28〜40%</div>
+              <div class="en-case-spec">エアコン：エグゼス<br>ダイキン 壁掛け型</div>
+            </div>
+          </div>
+          <div class="en-case-card">
+            <div class="en-case-head">びっくりドンキー<br>三宮店</div>
+            <div class="en-case-body">
+              <span class="en-case-rate-label">削減率</span>
+              <div class="en-case-rate">46%</div>
+              <div class="en-case-spec">エアコン：天井カセット四方向<br>東芝製 AUSB28077M</div>
+            </div>
+          </div>
+          <div class="en-case-card">
+            <div class="en-case-head">第一屋製パン<br>金町工場</div>
+            <div class="en-case-body">
+              <span class="en-case-rate-label">削減率</span>
+              <div class="en-case-rate">29.3%</div>
+              <div class="en-case-spec">エアコン：据え置き<br>ダイキン製</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="en-section">
+        <h2 class="en-section-title"><span class="en-title-icon">🌡️</span>設置例・想定コスト削減</h2>
+        <p class="en-section-sub">空調・冷蔵（冷凍）の施設状況・機器台数によって設置個数は変動します。</p>
+
+        <div class="en-install-grid">
+          <div class="en-install-card">
+            <h3>飲食店（例：コメダ珈琲）</h3>
+            <div class="en-install-row"><span class="en-install-label">構成</span><span class="en-install-value">室外機1台×室内機2台×設置1台</span></div>
+            <div class="en-install-row"><span class="en-install-label">電気代</span><span class="en-install-value">3〜4万円／月</span></div>
+            <div class="en-install-row"><span class="en-install-label">想定削減額</span><span class="en-install-value en-highlight">1万〜1.2万円／月</span></div>
+          </div>
+          <div class="en-install-card">
+            <h3>工場・倉庫（例：ビルマルチエアコン）</h3>
+            <div class="en-install-row"><span class="en-install-label">構成</span><span class="en-install-value">室外機1台×室内機N台×設置N台</span></div>
+            <div class="en-install-row"><span class="en-install-label">想定削減率</span><span class="en-install-value en-highlight">月対象電気コスト×約30%</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="en-section">
+        <h2 class="en-section-title"><span class="en-title-icon">🌡️</span>導入機器のご紹介</h2>
+        <p class="en-section-sub">施設の規模・用途に応じて、最適な省エネ機器をご提案します。</p>
+
+        <div class="en-grid-2">
+          <div class="en-device-card">
+            <h3>レベルアッパー</h3>
+            <p>室外機の電力波形を解析し、圧縮機に必要最小限の電力を供給する省エネ機器。中小規模の店舗・オフィスへの導入実績が豊富です。</p>
+          </div>
+          <div class="en-device-card">
+            <h3>COOLNOMIX（クールノミックス）</h3>
+            <p>センサーで温度を測定し、コンデンサーへ最適な温度調整を指示する制御機器。工場やテナントビルなど大型施設にも対応します。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="en-section">
+        <h2 class="en-section-title"><span class="en-title-icon">🌡️</span>このような施設・設備で特に効果を発揮します</h2>
+        <p class="en-section-sub">空調の稼働時間が長い、または台数の多い施設ほど削減効果が見込めます。</p>
+
+        <div class="en-grid-2">
+          <div class="en-target-item">
+            <div class="en-target-icon">🏭</div>
+            <div class="en-target-text">
+              <strong>工場・倉庫</strong>
+              <p>広い空間を長時間空調している施設</p>
+            </div>
+          </div>
+          <div class="en-target-item">
+            <div class="en-target-icon">🏢</div>
+            <div class="en-target-text">
+              <strong>オフィス・テナントビル</strong>
+              <p>複数台の業務用エアコンを稼働している施設</p>
+            </div>
+          </div>
+          <div class="en-target-item">
+            <div class="en-target-icon">🍽️</div>
+            <div class="en-target-text">
+              <strong>飲食店・小売店舗</strong>
+              <p>営業時間中は空調を止められない施設</p>
+            </div>
+          </div>
+          <div class="en-target-item">
+            <div class="en-target-icon">🏨</div>
+            <div class="en-target-text">
+              <strong>宿泊施設・スポーツ施設</strong>
+              <p>空調負荷が大きく、電気代の変動が大きい施設</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="en-section">
+        <h2 class="en-section-title"><span class="en-title-icon">🌡️</span>導入までのステップ</h2>
+
+        <div class="en-timeline">
+          <div class="en-timeline-item">
+            <div class="en-timeline-dot">1</div>
+            <h3>無料診断</h3>
+            <p>直近の電気明細と空調設備の稼働状況をもとに削減可能額を事前診断します。</p>
+          </div>
+          <div class="en-timeline-item">
+            <div class="en-timeline-dot">2</div>
+            <h3>現地調査・機器選定</h3>
+            <p>専門スタッフが現地を確認し、施設に最適な省エネ機器をご提案します。</p>
+          </div>
+          <div class="en-timeline-item">
+            <div class="en-timeline-dot">3</div>
+            <h3>設置工事・運用開始</h3>
+            <p>室外機への設置工事後、削減効果をモニタリングしながら運用をフォローします。</p>
+          </div>
+        </div>
+
+        <div class="en-note-box">
+          <p>※削減効果は空調設備の機種・使用状況により異なります。</p>
+          <p>※まずはお手元の「電気ご使用量のお知らせ（検針票）」をご用意のうえ、お気軽にお問い合わせください。</p>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>

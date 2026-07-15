@@ -76,35 +76,6 @@
     margin-top: 5px;
     font-weight: bold;
 }
-.eb-benefit-card {
-    display: flex;
-    background-color: #f8fafc;
-    border: 1px solid #e2e8f0;
-    border-radius: 8px;
-    margin-bottom: 15px;
-    overflow: hidden;
-}
-.eb-benefit-badge {
-    background-color: #1e3a8a;
-    color: #ffffff;
-    font-weight: bold;
-    width: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-size: 14px;
-    padding: 10px;
-    flex-shrink: 0;
-}
-.eb-benefit-content { padding: 20px; }
-.eb-benefit-content h3 {
-    font-size: 16px;
-    font-weight: bold;
-    margin: 0 0 8px 0 !important;
-    color: #0f172a !important;
-}
-.eb-benefit-content p { margin: 0; font-size: 14px; color: #475569; }
 .eb-small-text { font-size: 12px; color: #64748b; }
 .eb-target-item {
     display: flex;
@@ -116,25 +87,6 @@
 .eb-target-icon { font-size: 28px; margin-right: 15px; display: flex; align-items: center; }
 .eb-target-text strong { display: block; font-size: 15px; color: #0f172a; margin-bottom: 3px; }
 .eb-target-text p { margin: 0; font-size: 13px; color: #64748b; }
-.eb-flow-step {
-    background-color: #f8fafc;
-    border: 1px solid #e2e8f0;
-    border-radius: 8px;
-    padding: 20px;
-    text-align: center;
-}
-.eb-flow-num {
-    display: inline-block;
-    background-color: #2563eb;
-    color: #ffffff;
-    font-size: 12px;
-    font-weight: bold;
-    padding: 2px 12px;
-    border-radius: 20px;
-    margin-bottom: 10px;
-}
-.eb-flow-step h3 { font-size: 16px; font-weight: bold; margin: 0 0 10px 0 !important; color: #0f172a !important; }
-.eb-flow-step p { margin: 0; font-size: 13px; color: #64748b; text-align: left; }
 .eb-note-box {
     background-color: #fef3c7;
     border: 1px solid #fde68a;
@@ -146,11 +98,120 @@
 }
 .eb-note-box p { margin: 0 0 5px 0; }
 .eb-note-box p:last-child { margin: 0; }
+.eb-hero-band {
+    background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 55%, #60a5fa 100%);
+    border-radius: 16px;
+    padding: 36px 30px;
+    margin-top: 24px;
+    text-align: center;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.35);
+}
+.eb-hero-band::before {
+    content: "";
+    position: absolute;
+    top: -70px;
+    right: -70px;
+    width: 220px;
+    height: 220px;
+    background: radial-gradient(circle, rgba(255,255,255,0.35) 0%, rgba(255,255,255,0) 70%);
+    border-radius: 50%;
+}
+.eb-hero-band::after {
+    content: "";
+    position: absolute;
+    bottom: -80px;
+    left: -40px;
+    width: 180px;
+    height: 180px;
+    background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 70%);
+    border-radius: 50%;
+}
+.eb-hero-icon { font-size: 42px; display: block; margin-bottom: 10px; position: relative; z-index: 1; }
+.eb-hero-band h2 { font-size: 22px; margin: 0 0 8px 0 !important; color: #ffffff !important; font-weight: bold; position: relative; z-index: 1; }
+.eb-hero-band p { margin: 0; font-size: 14px; opacity: 0.95; position: relative; z-index: 1; }
+.eb-title-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #2563eb, #60a5fa);
+    color: #ffffff;
+    font-size: 13px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+.eb-benefit-icon-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+.eb-benefit-icon-card {
+    background-color: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 12px;
+    padding: 24px 18px;
+    text-align: center;
+}
+.eb-benefit-icon {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #2563eb, #60a5fa);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 14px;
+    font-size: 24px;
+    color: #ffffff;
+}
+.eb-benefit-icon-card h3 { font-size: 15px; font-weight: bold; margin: 0 0 8px 0 !important; color: #0f172a !important; }
+.eb-benefit-icon-card p { margin: 0; font-size: 13px; color: #475569; line-height: 1.6; }
+.eb-timeline {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding-top: 6px;
+}
+.eb-timeline::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 8%;
+    right: 8%;
+    height: 3px;
+    background: linear-gradient(90deg, #bfdbfe, #2563eb, #bfdbfe);
+    z-index: 0;
+}
+.eb-timeline-item { position: relative; z-index: 1; flex: 1; text-align: center; padding: 0 10px; }
+.eb-timeline-dot {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #2563eb;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 12px;
+    font-weight: bold;
+    font-size: 15px;
+    box-shadow: 0 0 0 6px #eff6ff;
+}
+.eb-timeline-item h3 { font-size: 14px; font-weight: bold; margin: 0 0 6px 0 !important; color: #0f172a !important; }
+.eb-timeline-item p { margin: 0; font-size: 12px; color: #64748b; line-height: 1.6; text-align: left; }
 @media (max-width: 768px) {
     .eb-section { padding: 20px; }
     .eb-grid-3, .eb-grid-2 { grid-template-columns: 1fr; gap: 15px; }
-    .eb-benefit-card { flex-direction: column; }
-    .eb-benefit-badge { width: 100%; padding: 8px; }
+    .eb-hero-band { padding: 28px 20px; }
+    .eb-benefit-icon-grid { grid-template-columns: 1fr; }
+    .eb-timeline { flex-direction: column; gap: 22px; }
+    .eb-timeline::before { display: none; }
+    .eb-timeline-item p { text-align: center; }
 }
 </style>
 </head>
@@ -219,10 +280,16 @@
       </div>
     </div>
 
+    <div class="eb-hero-band">
+      <span class="eb-hero-icon">🔌</span>
+      <h2>ブレーカーを替えるだけで、基本料金を削減。</h2>
+      <p>設備の買い替え不要、次世代型「電子ブレーカー」で毎月の固定費をカットします。</p>
+    </div>
+
     <div class="eb-page-container" style="margin-top:24px;">
 
       <div class="eb-section">
-        <h2 class="eb-section-title">電子ブレーカーとは？（基本の仕組み）</h2>
+        <h2 class="eb-section-title"><span class="eb-title-icon">🔌</span>電子ブレーカーとは？（基本の仕組み）</h2>
         <div class="eb-about-box">
           <p>従来の熱動式ブレーカーとは異なり、<strong>CPU（マイコン）による精密なデジタル制御</strong>で電流を測定する最新のブレーカーです。</p>
           <p>稼働状況に合わせて安全かつ限界まで契約容量を引き下げられるため、電力会社との契約を「主開閉器契約」へ変更し、毎月必ず発生する<strong>基本料金を大幅にカット</strong>できます。</p>
@@ -245,35 +312,29 @@
       </div>
 
       <div class="eb-section">
-        <h2 class="eb-section-title">導入による3つのメリット</h2>
+        <h2 class="eb-section-title"><span class="eb-title-icon">🔌</span>導入による3つのメリット</h2>
 
-        <div class="eb-benefit-card">
-          <div class="eb-benefit-badge">メリット 1</div>
-          <div class="eb-benefit-content">
-            <h3>毎月の固定費（基本料金）を長期的に削減</h3>
-            <p>一度導入すれば、使用感はそのままに毎月の基本料金をカットし続けられます。<br><span class="eb-small-text">※使用量に応じた従量料金は変わりません。</span></p>
+        <div class="eb-benefit-icon-grid">
+          <div class="eb-benefit-icon-card">
+            <div class="eb-benefit-icon">💰</div>
+            <h3>固定費を長期的に削減</h3>
+            <p>一度導入すれば、使用感はそのままに毎月の基本料金をカットし続けられます。<br><span class="eb-small-text">※従量料金は変わりません。</span></p>
           </div>
-        </div>
-
-        <div class="eb-benefit-card">
-          <div class="eb-benefit-badge">メリット 2</div>
-          <div class="eb-benefit-content">
-            <h3>既存の機械・設備を買い替える必要なし</h3>
+          <div class="eb-benefit-icon-card">
+            <div class="eb-benefit-icon">🏭</div>
+            <h3>設備の買い替え不要</h3>
             <p>現在使用している工場設備、エレベーター、業務用エアコン等をそのまま使用可能。ブレーカー交換のみで導入できます。</p>
           </div>
-        </div>
-
-        <div class="eb-benefit-card">
-          <div class="eb-benefit-badge">メリット 3</div>
-          <div class="eb-benefit-content">
-            <h3>デジタル精密制御で「落ちにくい」安全設計</h3>
+          <div class="eb-benefit-icon-card">
+            <div class="eb-benefit-icon">🛡️</div>
+            <h3>「落ちにくい」安全設計</h3>
             <p>機械起動時の一時的な突発電流をデジタル計算して許容するため、従来のブレーカーよりも誤作動による停電のリスクが減ります。</p>
           </div>
         </div>
       </div>
 
       <div class="eb-section">
-        <h2 class="eb-section-title">このような施設・設備で特に効果を発揮します</h2>
+        <h2 class="eb-section-title"><span class="eb-title-icon">🔌</span>このような施設・設備で特に効果を発揮します</h2>
         <p class="eb-section-sub">低圧電力（動力を伴う50kW未満の契約）をご利用中の以下の施設に最適です。</p>
 
         <div class="eb-grid-2">
@@ -309,21 +370,21 @@
       </div>
 
       <div class="eb-section">
-        <h2 class="eb-section-title">導入までのステップ</h2>
+        <h2 class="eb-section-title"><span class="eb-title-icon">🔌</span>導入までのステップ</h2>
 
-        <div class="eb-grid-3">
-          <div class="eb-flow-step">
-            <span class="eb-flow-num">STEP 1</span>
+        <div class="eb-timeline">
+          <div class="eb-timeline-item">
+            <div class="eb-timeline-dot">1</div>
             <h3>無料試算</h3>
             <p>直近の電気明細（検針票）をもとに削減可能額を事前診断します。</p>
           </div>
-          <div class="eb-flow-step">
-            <span class="eb-flow-num">STEP 2</span>
+          <div class="eb-timeline-item">
+            <div class="eb-timeline-dot">2</div>
             <h3>現地調査・提案</h3>
             <p>専門スタッフが配電盤や設備の稼働状況を確認・ご案内します。</p>
           </div>
-          <div class="eb-flow-step">
-            <span class="eb-flow-num">STEP 3</span>
+          <div class="eb-timeline-item">
+            <div class="eb-timeline-dot">3</div>
             <h3>工事・契約変更</h3>
             <p>電力会社への申請代行から設置工事まで一括対応いたします。</p>
           </div>
