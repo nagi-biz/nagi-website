@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<title>TikTok連携中...</title>
+</head>
+<body>
+<p>TikTokログイン処理中です。しばらくお待ちください…</p>
+<script>
+  // TikTokのOAuthリダイレクト先として、このページの固定URLを登録しておく。
+  // 受け取ったcode/stateをそのままローカルの認証待ち受けサーバー(tiktok-auto-poster
+  // の src/login.js が起動する http://localhost:8721/callback)へ引き渡すだけの
+  // 中継ページ。ngrokのような一時トンネルが不要になり、Redirect URIも固定できる。
+  window.location.replace('http://localhost:8721/callback' + window.location.search);
+</script>
+</body>
+</html>
