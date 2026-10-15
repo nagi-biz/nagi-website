@@ -43,7 +43,7 @@
 - 電話番号: 00-0000-0000
 - メール: info@example.com
 - 代表者名・設立年月・取引銀行（about.htmlのinfo-table内）
-- お問い合わせフォームは送信機能なし（デザイン確認用の仮設置）
+- お問い合わせフォーム: 2026-10-15 に FormSubmit（https://formsubmit.co）経由で info.nagi.biz@gmail.com へ送信するよう設定済み。送信後は contact.html?sent=1 に戻り完了メッセージを表示
 
 ## Git管理
 - 2026-07-09にリポジトリ初期化、初回コミット済み

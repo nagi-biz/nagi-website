@@ -61,7 +61,15 @@
 <section>
   <div class="container">
     <div class="contact-layout contact-layout-single">
-      <form class="contact-form" action="#" method="post">
+      <div class="form-sent" hidden>
+        <p class="form-sent-title">お問い合わせを受け付けました</p>
+        <p>内容を確認のうえ、担当者よりご連絡いたします。</p>
+      </div>
+      <form class="contact-form" action="https://formsubmit.co/info.nagi.biz@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="【HPお問い合わせ】梛合同会社">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://nagi-biz.github.io/nagi-website/contact.html?sent=1">
+        <input type="text" name="_honey" class="form-honey" tabindex="-1" autocomplete="off" aria-hidden="true">
         <div class="form-group">
           <label for="company">会社名<span class="req">必須</span></label>
           <input type="text" id="company" name="company" required>
@@ -82,17 +90,17 @@
           <label for="subject">お問い合わせ項目<span class="req">必須</span></label>
           <select id="subject" name="subject" required>
             <option value="">選択してください</option>
-            <option value="cost">コスト削減事業について（業務用空調設備の省エネ・新電力・法人携帯・電子ブレーカー・太陽光・蓄電池）</option>
-            <option value="growth">集客・売上向上事業について（デジタルサイネージ・集客アプリ・フードデリバリー・生成AI）</option>
-            <option value="other">その他</option>
+            <option value="コスト削減事業">コスト削減事業について（業務用空調設備の省エネ・新電力・法人携帯・電子ブレーカー・太陽光・蓄電池）</option>
+            <option value="集客・売上向上事業">集客・売上向上事業について（デジタルサイネージ・集客アプリ・フードデリバリー・生成AI）</option>
+            <option value="その他">その他</option>
           </select>
         </div>
         <div class="form-group">
           <label for="message">お問い合わせ内容<span class="req">必須</span></label>
           <textarea id="message" name="message" rows="6" required></textarea>
         </div>
-        <p class="form-note">※現在このフォームはデザイン確認用の仮設置です。実際に送信するには、WordPress化の際にフォームプラグイン等との連携が必要です。</p>
-        <button type="submit" class="btn btn-primary">送信内容を確認する</button>
+        <p class="form-note">※送信後、迷惑メール防止のための確認画面が表示される場合があります。</p>
+        <button type="submit" class="btn btn-primary">送信する</button>
       </form>
     </div>
   </div>

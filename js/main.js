@@ -15,4 +15,11 @@ document.addEventListener("DOMContentLoaded", function () {
       navItem.classList.toggle("open");
     });
   }
+
+  var sent = document.querySelector(".form-sent");
+  var contactForm = document.querySelector(".contact-form");
+  if (sent && contactForm && /[?&]sent=1/.test(location.search)) {
+    sent.hidden = false;
+    contactForm.hidden = true;
+  }
 });
